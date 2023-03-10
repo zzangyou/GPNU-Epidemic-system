@@ -1,0 +1,143 @@
+.box {
+    ::-webkit-scrollbar {
+      display: none; /* Chrome Safari */
+    }
+    margin: auto;
+    width: 100%;
+    .group {
+      background: rgba(200, 200, 169, 0.05);
+      height: 55rem;
+      width: 100%;
+      .group_head {
+        .title {
+          height: 4rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          span {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 1.8rem;
+          }
+        }
+        position: relative;
+        display: flex;
+        /*justify-content: center;*/
+        align-items: center;
+        /*border-bottom:1px solid grey ;*/
+        box-shadow: 0px 15px 10px -20px grey;
+        width: 100%;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        /*,Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑"*/
+        .group_head_online {
+          position: absolute;
+          right: 1.5rem;
+          top: -1rem;
+          color: dodgerblue;
+        }
+      }
+      .comment {
+        padding-bottom: 5rem;
+        border: 1px solid rgba(189, 172, 156, 0.5);
+        overflow-y: scroll;
+        width: 100%;
+        height: 32rem;
+        /*border-bottom: 1px solid  rgba(189, 172, 156, 0.5);;*/
+        ul {
+          li {
+            //我的列表
+            .msgMy {
+              margin-right: 1.5rem;
+              .msg_title {
+                display: flex;
+                justify-content: flex-end;
+                span {
+                  margin-right: 0.5rem;
+                  margin-left: 1rem;
+                }
+              }
+              display: flex;
+              justify-content: flex-end;
+              pre {
+                color: white;
+                box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24),
+                  0 0 2px rgba(10, 16, 20, 0.12);
+                background: rgba(107, 194, 53, 0.5);
+                border-top-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+              }
+            }
+            .msgOther {
+              display: flex;
+              pre {
+                padding-left: 0.3rem;
+                padding-right: 0.3rem;
+                box-shadow: 0 2px 2px rgba(10, 16, 20, 0.1),
+                  0 0 2px rgba(10, 16, 20, 0.1);
+                background: rgba(200, 200, 169, 0.1);
+                border-bottom-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+              }
+            }
+            //共有部分
+            .head_img {
+              width: 3rem;
+              height: 3rem;
+              min-height: 3rem;
+              min-width: 3rem;
+              border-radius: 50%;
+              overflow: hidden;
+              img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .msg {
+              max-width: 50rem;
+              pre {
+                /*Line-height:2px;*/
+                line-height: 1.5em;
+                letter-spacing: 2px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                display: flex;
+                align-items: center;
+                min-height: 3rem;
+                min-width: 1rem;
+                margin-top: 0.2rem;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                font-size: 1.5rem;
+              }
+              margin-right: 0.5rem;
+              margin-left: 0.5rem;
+              display: flex;
+              flex-flow: column;
+              .msg_title {
+                span {
+                  font-size: 0.6rem;
+                }
+                i {
+                  font-size: 0.6rem;
+                  color: grey;
+                }
+              }
+            }
+          }
+        }
+      }
+      .send {
+        .el-textarea__inner {
+          height: 200px;
+          min-height: 200px;
+        }
+        width: 100%;
+        height: 20rem;
+        .eliinput {
+          min-height: 20rem;
+        }
+      }
+    }
+  }
